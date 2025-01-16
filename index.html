@@ -1,40 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elegant Blog</title>
+    <title>Usando GitHub Codespaces</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="blog-header">
-        <h1>Welcome to My Blog</h1>
-        <p class="subtitle">Sharing ideas, stories, and inspiration</p>
+        <h1>Bienvenido a GitHub Codespaces</h1>
+        <p class="subtitle">Una Guía para el Desarrollo Colaborativo</p>
     </header>
     <nav class="navigation">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#setup">Configuración</a></li>
+            <li><a href="#features">Características</a></li>
+            <li><a href="#tips">Consejos</a></li>
+            <li><a href="#collaboration">Colaboración</a></li>
         </ul>
     </nav>
     <main class="content">
-        <article class="post">
-            <h2 class="post-title">The Journey Begins</h2>
-            <p class="post-date">January 16, 2025</p>
-            <p class="post-content">Welcome to my first blog post! This is a space where I share my thoughts, projects, and experiences. Stay tuned for more updates.</p>
-            <a href="#" class="read-more">Read more...</a>
-        </article>
-        <article class="post">
-            <h2 class="post-title">Exploring CSS Elegance</h2>
-            <p class="post-date">January 10, 2025</p>
-            <p class="post-content">CSS can transform a simple webpage into something visually stunning. Let’s dive into some tips and tricks for elegant designs.</p>
-            <a href="#" class="read-more">Read more...</a>
-        </article>
+        <section id="setup">
+            <h2 class="post-title">Cómo Empezar</h2>
+            <p class="post-content">Para crear un Codespace, ve a tu repositorio de GitHub, haz clic en el botón <strong>Code</strong> y selecciona <strong>Create Codespace </strong> y la <strong>rama.</strong> Espera a que se configure el entorno y estarás listo para comenzar a programar.</p>
+        </section>
+        <section id="features">
+            <h2 class="post-title">Características Clave</h2>
+            <ul class="post-content">
+                <li>Entorno de desarrollo completamente personalizable.</li>
+                <li>Extensiones y herramientas preinstaladas.</li>
+                <li>Integración directa con repositorios de GitHub.</li>
+                <li>Capacidad de compartir puertos para acceder a servidores locales.</li>
+            </ul>
+        </section>
+        <section id="tips">
+            <h2 class="post-title">Consejos</h2>
+            <p class="post-content">Usa la terminal incorporada para comandos rápidos, instala extensiones para mejorar la productividad y utiliza la pestaña <strong>Ports</strong> para acceder a servidores locales.</p>
+        </section>
+        <section id="collaboration">
+            <h2 class="post-title">Colaboración en Codespaces</h2>
+            <p class="post-content">Para colaborar, utiliza la extensión <strong>Live Share</strong>. Invita a otros compartiendo el enlace generado, lo que permite la edición y depuración en tiempo real.</p>
+            <p class="post-content">Una vez que termines de programar, puedes guardar tus cambios usando los siguientes comandos:</p>
+            <ul class="post-content">
+                <li><code>git add .</code> (agrega todos los archivos al área de preparación).</li>
+                <li><code>git commit -m "Descripción de los cambios"</code> (guarda los cambios en un commit).</li>
+                <li><code>git push</code> (envía los cambios al repositorio remoto).</li>
+            </ul>
+            <p class="post-content">Si deseas previsualizar tu proyecto en un navegador, puedes usar los siguientes comandos para iniciar un servidor local:</p>
+            <ul class="post-content">
+                <li><code>npm install -g http-server</code> (instala un servidor HTTP simple).</li>
+                <li><code>http-server .</code> (inicia el servidor en el directorio actual).</li>
+            </ul>
+        </section>
+        <section id="ramas">
+            <h2 class="post-title">Utilizamos ramas</h2>
+            <p class="post-content">Para trabajar en Codespaces desde ramas y facilitar la colaboración, sigue este flujo de trabajo:</p>
+            <h3>Flujo con Ramas y Pull Requests</h3>
+            <ol class="post-content">
+                <li><strong>Crear una rama nueva:</strong> Usa el comando <code>git checkout -b nombre-de-la-rama</code> para crear una rama específica.</li>
+                <li><strong>Trabajar en la rama:</strong> Haz los cambios necesarios y guárdalos con <code>git add</code> y <code>git commit</code>.</li>
+                <li><strong>Subir cambios:</strong> Usa <code>git push origin nombre-de-la-rama</code>.</li>
+                <li><strong>Crear un Pull Request:</strong> Desde GitHub, crea un Pull Request para fusionar los cambios en <code>main</code>. Revisa y aprueba antes de fusionar.</li>
+            </ol>
+            <h3>Flujo Simplificado sin Pull Requests</h3>
+            <ol class="post-content">
+                <li><strong>Crear una rama:</strong> Usa <code>git checkout -b nombre-de-la-rama</code> para trabajar de forma aislada.</li>
+                <li><strong>Colaborar directamente:</strong> Todos los colaboradores trabajan en la misma rama dentro del Codespace.</li>
+                <li><strong>Guardar cambios:</strong> Cada persona guarda sus progresos usando <code>git add</code>, <code>git commit</code> y <code>git push origin nombre-de-la-rama</code>.</li>
+                <li><strong>Fusionar la rama:</strong> El encargado del proyecto puede hacer un <code>git merge nombre-de-la-rama</code> desde <code>main</code> una vez que los cambios estén listos.</li>
+            </ol>
+            <p class="post-content">Este enfoque asegura que el trabajo colaborativo sea organizado y eficiente, adaptándose al nivel de experiencia del equipo.</p>
+            <p class="post-content">Una vez que termines de programar, puedes guardar tus cambios usando los siguientes comandos:</p>
+            <ul class="post-content">
+                <li><code>git add .</code> (agrega todos los archivos al área de preparación).</li>
+                <li><code>git commit -m "Descripción de los cambios"</code> (guarda los cambios en un commit).</li>
+                <li><code>git push</code> (envía los cambios al repositorio remoto).</li>
+            </ul>
+            <p class="post-content">Si deseas previsualizar tu proyecto en un navegador, puedes usar los siguientes comandos para iniciar un servidor local:</p>
+            <ul class="post-content">
+                <li><code>npm install -g http-server</code> (instala un servidor HTTP simple).</li>
+                <li><code>http-server .</code> (inicia el servidor en el directorio actual).</li>
+            </ul>
+        </section>
     </main>
     <footer class="blog-footer">
-        <p>&copy; 2025 My Elegant Blog. All rights reserved.</p>
+        <p>&copy; 2025 Guía de uso GitHub Codespaces. </p>
     </footer>
 </body>
 </html>
+
